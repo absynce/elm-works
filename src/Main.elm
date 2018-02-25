@@ -23,7 +23,10 @@ main =
                             (Css.hex "60B5CC")
                         )
         }
-        [ titleSlide ]
+        [ titleSlide
+        , myHistorySlide
+        , beforeElmInHXSlide
+        ]
 
 
 titleSlide : Slides.Slide
@@ -39,3 +42,24 @@ titleSlide =
 *by Jared M. Smith*
 
 """
+
+
+myHistorySlide : Slides.Slide
+myHistorySlide =
+    Slides.mdFragments
+        [ "# My history"
+        , "* Java -> C# -> JavaScript -> Elm"
+        , """* JavaScript = My first 💖
+  * Do (allthethings)
+  * Quick feedback loop
+  * Web could be interactive"""
+        , "* Working alone"
+        , "* Working on a team"
+        ]
+
+
+beforeElmInHXSlide : Slides.Slide
+beforeElmInHXSlide =
+    Slides.mdFragments
+        [ "# Before Elm in HX"
+        ]
