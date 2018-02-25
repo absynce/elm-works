@@ -1,12 +1,28 @@
 module Main exposing (..)
 
-import Slides
+import Css
+import Css.Elements
+import Slides exposing (slidesDefaultOptions)
+import Slides.Styles
 
 
 main : Program Never Slides.Model Slides.Msg
 main =
     Slides.app
-        Slides.slidesDefaultOptions
+        { slidesDefaultOptions
+            | style =
+                [ Css.Elements.img
+                    [ Css.width Css.auto
+                    ]
+                ]
+                    |> List.append
+                        (Slides.Styles.elmMinimalist
+                            (Css.rgb 255 255 255)
+                            (Css.rgb 230 230 230)
+                            (Css.px 30)
+                            (Css.hex "60B5CC")
+                        )
+        }
         [ titleSlide ]
 
 
@@ -14,10 +30,12 @@ titleSlide : Slides.Slide
 titleSlide =
     Slides.md
         """
+<img alt="IWT Health Logo" class="iwt-logo" src="images/IWTLogo-800x177.png" />
+
 # Elm Works
 
-![IWT Health Logo](images/IWTLogo-800x177.png)
 ![Elm Logo](images/Elm_logo.png)
 
 *by Jared M. Smith*
+
 """

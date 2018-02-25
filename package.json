@@ -4,7 +4,7 @@
   "description": "Presentation on using Elm at work written in Elm.",
   "main": "index.js",
   "scripts": {
-    "build": "cd src && elm-make Main.elm --output=../index.html",
+    "build": "cd src && elm-make Main.elm --output=../elm.js",
     "dev": "npm run watch -s && npm run start",
     "start": "elm reactor -p 8082",
     "test": "echo \"Error: no test specified\" && exit 1",
