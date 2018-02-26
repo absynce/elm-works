@@ -26,6 +26,7 @@ main =
         [ titleSlide
         , myHistorySlide
         , beforeElmInHXSlide
+        , frontEndFrameworkAlternativesSlides
         ]
 
 
@@ -62,4 +63,25 @@ beforeElmInHXSlide : Slides.Slide
 beforeElmInHXSlide =
     Slides.mdFragments
         [ "# Before Elm in HX"
+        , "* AngularJS tests"
+        , "* [lodashfp](https://github.com/lodash/lodash/wiki/FP-Guide)"
+        , "* ES Future/Flow/TypeScript evaluation"
+        ]
+
+
+frontEndFrameworkAlternativesSlides : Slides.Slide
+frontEndFrameworkAlternativesSlides =
+    Slides.mdFragments
+        [ "# Front-end framework alternatives"
+        , "* AngularJS" -- <i class=\"angularjs-logo\"></i>"
+        , "* Angular 2+"
+        , "* React"
+        , "* Vue.js"
+        ]
+
+
+frontEndFrameworkComparisonCriteriaSlides : Slides.Slide
+frontEndFrameworkComparisonCriteriaSlides =
+    Slides.mdFragments
+        [ "# Framework comparison criteria"
         ]
