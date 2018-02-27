@@ -26,7 +26,10 @@ main =
         [ titleSlide
         , myHistorySlide
         , beforeElmInHXSlide
-        , frontEndFrameworkAlternativesSlides
+
+        -- , frontEndFrameworkAlternativesSlides
+        -- , frontEndFrameworkComparisonCriteriaSlides
+        , whyNotElm
         ]
 
 
@@ -84,4 +87,18 @@ frontEndFrameworkComparisonCriteriaSlides : Slides.Slide
 frontEndFrameworkComparisonCriteriaSlides =
     Slides.mdFragments
         [ "# Framework comparison criteria"
+        ]
+
+
+whyNotElm : Slides.Slide
+whyNotElm =
+    Slides.mdFragments
+        [ "# Why not Elm?"
+        , "* Not for throwaway projects"
+        , "* Not popular enough"
+        , """* BDFL-driven
+  * Evan Czaplicki ([GitHub](https://github.com/evancz))
+  * [Elm Foundation](http://foundation.elm-lang.org/)
+"""
+        , "* It's different"
         ]
