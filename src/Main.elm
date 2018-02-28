@@ -32,6 +32,12 @@ main =
         -- , frontEndFrameworkAlternativesSlides
         -- , frontEndFrameworkComparisonCriteriaSlides
         , whyNotElm
+        , whyElm
+        , reliability
+        , simplifiedQA
+        , refactoring
+        , reduceJavaScriptFatigue
+        , consistentLibrariesAndDocumentation
         ]
 
 
@@ -125,4 +131,72 @@ whyNotElm =
   * [Elm Foundation](http://foundation.elm-lang.org/)
 """
         , "* It's different"
+        ]
+
+
+whyElm : Slides.Slide
+whyElm =
+    Slides.md """
+# Why Elm?
+
+* Reliable
+* Simplified QA
+* Reduce JavaScript fatigue
+* Consistent libraries and documentation
+* Refactoring is easy
+* Dev happiness
+"""
+
+
+reliability : Slides.Slide
+reliability =
+    Slides.mdFragments
+        [ "# Reliability"
+        , "\"No runtime exceptions in practice\""
+        , """<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">After 2 years and 200,000 lines of production <a href="https://twitter.com/elmlang?ref_src=twsrc%5Etfw">@elmlang</a> code, we got our first production runtime exception.<br><br>(We wrote code that called Debug.crash and shipped it. That function does what it says on the tin. 😅)<br><br>In that period, our legacy JS code has crashed a mere 60,000 times.</p>&mdash; Richard Feldman (@rtfeldman) <a href="https://twitter.com/rtfeldman/status/961051166783213570?ref_src=twsrc%5Etfw">February 7, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+"""
+        ]
+
+
+simplifiedQA : Slides.Slide
+simplifiedQA =
+    Slides.mdFragments
+        [ "# Simplified QA"
+        , "* [The Perfect Bug Report](http://elm-lang.org/blog/the-perfect-bug-report)"
+        , "* Fewer regression bugs"
+        , "* See reliability and refactoring"
+        ]
+
+
+refactoring : Slides.Slide
+refactoring =
+    Slides.mdFragments
+        [ "# Refactoring is easy"
+        , "* [Friendly compiler errors](http://elm-lang.org/blog/compilers-as-assistants)"
+        , "* [elmjutsu](https://atom.io/packages/elmjutsu) provides ReSharper-like refactoring powers"
+        ]
+
+
+reduceJavaScriptFatigue : Slides.Slide
+reduceJavaScriptFatigue =
+    Slides.mdFragments
+        [ "# Reduce JavaScript fatigue"
+        , "* [What is JS fatigue?](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f)"
+        , "* No backward compatibility with JavaScript (not the same as interop)"
+        , "* Compile-time errors"
+        , "* [Packages](http://package.elm-lang.org/)"
+        , "* See consistent libraries and documentation"
+        ]
+
+
+consistentLibrariesAndDocumentation : Slides.Slide
+consistentLibrariesAndDocumentation =
+    Slides.mdFragments
+        [ "# Consistent libraries and documentation"
+        , "* [Auto/enforced semantic versioning](https://github.com/elm-lang/elm-package#publishing-updates)"
+        , """* [Package updates](https://github.com/elm-lang/elm-package/blob/master/README.md)
+```
+elm-package diff elm-lang/core 3.0.0 4.0.0
+```"""
         ]
