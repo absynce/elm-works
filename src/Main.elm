@@ -38,6 +38,7 @@ main =
         , refactoring
         , reduceJavaScriptFatigue
         , consistentLibrariesAndDocumentation
+        , cleanCode
         , developerHappiness
         , liveCoding
         ]
@@ -147,6 +148,7 @@ whyElm =
 * Reduce JavaScript fatigue
 * Consistent libraries and documentation
 * Refactoring is easy
+* Clean code
 * Dev happiness
 """
 
@@ -209,6 +211,16 @@ elm-package diff elm-lang/core 3.0.0 4.0.0
         ]
 
 
+cleanCode : Slides.Slide
+cleanCode =
+    Slides.md """
+# Clean code
+
+* Signals -> Subscriptions
+* One way to do most things
+"""
+
+
 developerHappiness : Slides.Slide
 developerHappiness =
     Slides.md """
@@ -218,6 +230,7 @@ developerHappiness =
 * Bug reports
 * Reduce JavaScript fatigue
 * Consistent libraries and documentation
+* Clean code
 * Refactoring is easy
 """
 
