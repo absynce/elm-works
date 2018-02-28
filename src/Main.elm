@@ -38,6 +38,8 @@ main =
         , refactoring
         , reduceJavaScriptFatigue
         , consistentLibrariesAndDocumentation
+        , developerHappiness
+        , liveCoding
         ]
 
 
@@ -129,6 +131,7 @@ whyNotElm =
         , """* BDFL-driven
   * Evan Czaplicki ([GitHub](https://github.com/evancz))
   * [Elm Foundation](http://foundation.elm-lang.org/)
+  * [Slack](https://elmlang.slack.com/)
 """
         , "* It's different"
         ]
@@ -173,8 +176,11 @@ refactoring : Slides.Slide
 refactoring =
     Slides.mdFragments
         [ "# Refactoring is easy"
+        , """<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Major refactors are so easy w/ <a href="https://twitter.com/elmlang?ref_src=twsrc%5Etfw">@elmlang</a>!<br>JS: 10 min refactor; 2 hrs of playing &quot;did I break anything?&quot;<br>Elm: 15 min refactor; it just works.</p>&mdash; ❄️ Chilly Noah ☃️ (@noahzgordon) <a href="https://twitter.com/noahzgordon/status/771439383262232580?ref_src=twsrc%5Etfw">September 1, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        """
         , "* [Friendly compiler errors](http://elm-lang.org/blog/compilers-as-assistants)"
         , "* [elmjutsu](https://atom.io/packages/elmjutsu) provides ReSharper-like refactoring powers"
+        , "* See examples in live coding"
         ]
 
 
@@ -199,4 +205,30 @@ consistentLibrariesAndDocumentation =
 ```
 elm-package diff elm-lang/core 3.0.0 4.0.0
 ```"""
+        , "* Example documentation ([elm-lang/http](http://package.elm-lang.org/packages/elm-lang/http/latest))"
         ]
+
+
+developerHappiness : Slides.Slide
+developerHappiness =
+    Slides.md """
+# ~~Why Elm?~~ Dev happiness
+
+* Reliable
+* Bug reports
+* Reduce JavaScript fatigue
+* Consistent libraries and documentation
+* Refactoring is easy
+"""
+
+
+liveCoding : Slides.Slide
+liveCoding =
+    Slides.md """
+# Live coding
+
+* elm-stand-up
+* Atom
+* Don't expect to understand everything (or appreciate all)
+* Relate to R#
+"""
