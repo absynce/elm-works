@@ -1,3 +1,14 @@
 .iwt-logo {
    filter: grayscale(.2);
 }
+
+.angularjs-logo {
+   background-image: url(images/AngularJS-Shield.svg);
+   display: inline-block;
+   height: 1em;
+   width: 1em;
+}
+
+.title-slide {
+   text-align: center;
+}

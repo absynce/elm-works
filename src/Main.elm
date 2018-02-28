@@ -2,6 +2,8 @@ module Main exposing (..)
 
 import Css
 import Css.Elements
+import Html exposing (..)
+import Html.Attributes exposing (..)
 import Slides exposing (slidesDefaultOptions)
 import Slides.Styles
 
@@ -35,17 +37,39 @@ main =
 
 titleSlide : Slides.Slide
 titleSlide =
-    Slides.md
-        """
-<img alt="IWT Health Logo" class="iwt-logo" src="images/IWTLogo-800x177.png" />
+    Slides.html <|
+        div [ class "title-slide" ]
+            [ img
+                [ alt "IWT Health Logo"
+                , class "iwt-logo"
+                , src "images/IWTLogo-800x177.png"
+                ]
+                []
+            , h1 [] [ text "Elm Works" ]
+            , img
+                [ alt "Elm Logo"
 
-# Elm Works
+                -- , class "iwt-logo"
+                , src "images/Elm_logo.png"
+                ]
+                []
+            , div []
+                [ em [] [ text "by Jared M. Smith" ]
+                ]
+            ]
 
-![Elm Logo](images/Elm_logo.png)
 
-*by Jared M. Smith*
 
-"""
+--         """
+-- <img alt="IWT Health Logo" class="iwt-logo" src="images/IWTLogo-800x177.png" />
+--
+-- # Elm Works
+--
+-- ![Elm Logo](images/Elm_logo.png)
+--
+-- *by Jared M. Smith*
+--
+-- """
 
 
 myHistorySlide : Slides.Slide
